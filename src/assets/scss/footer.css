@@ -1,0 +1,27 @@
+.info-table {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+
+.info-table_links {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+}
+.info-table_links a {
+  text-decoration: none;
+}
+.info-table_links > :not(:last-child) {
+  padding-bottom: 5px;
+}
+
+.info-table_tittle {
+  color: #000000;
+}
+
+.info-table_text {
+  color: #6F6D6D;
+}
+
+/*# sourceMappingURL=footer.css.map */

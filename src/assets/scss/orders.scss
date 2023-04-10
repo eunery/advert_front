@@ -1,0 +1,61 @@
+@import 'vars';
+@import 'colors';
+
+.orders {
+}
+
+.orders_search {
+  width: 100%;
+}
+
+.orders__tittle {
+  margin-top: 50px;
+}
+
+.orders__list {
+  margin-top: 50px;
+  padding: 50px;
+  background-color: $white-color;
+  border-radius: 20px;
+  h2 {
+    color: $blue-color;
+  }
+  h3 {
+    text-align: right;
+  }
+  h4 {
+    margin: 10px 0;
+  }
+  p {
+    margin-top: 20px;
+  }
+  .item_tittle {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.orders__pagination {
+  margin-top: 40px;
+   p {
+     font-size: 24px;
+     margin: 0 10px;
+   }
+   .pagination_container {
+     display: flex;
+     position: relative;
+     justify-content: center;
+     &::before {
+       content: url("src/assets/images/arrow.svg");
+       background-size: 24px;
+       left: 0;
+       top: 0;
+     }
+     &::after {
+       content: url("src/assets/images/arrow.svg");
+       background-size: 24px;
+       top: 0;
+       right: 0;
+       transform: scale(-1 , 1);
+     }
+  }
+}

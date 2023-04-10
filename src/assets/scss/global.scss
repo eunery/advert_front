@@ -1,0 +1,128 @@
+@import '../fonts/gilroy/stylesheet.css';
+@import '../fonts/lufga/stylesheet.css';
+@import 'colors';
+@import 'vars';
+
+body {
+  font-family: Gilroy;
+  background-color: $light-white-color;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.content {
+  flex: 1;
+}
+
+.header {
+  min-height: 100%;
+}
+.footer {
+  min-height: 100%;
+}
+
+.container{
+  padding-left: $container-padding;
+  padding-right: $container-padding;
+}
+a.router-link-exact-active {
+  font-weight: bold;
+}
+
+a.router-link-active {
+  font-weight: bold;
+}
+
+.active-box {
+  color: $white-color;
+  background-color: $blue-color;
+  img {
+    filter: invert(1);
+  }
+}
+
+.default-input-color {
+  background-color: $light-white-color;
+  color: $gray-color;
+}
+
+.bordered-button {
+  border-radius: 10px;
+  padding: 15px 30px;
+  border-style: none;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+}
+
+.x-small-regular {
+  font-weight: normal;
+  font-size: $x-small-size;
+  line-height: $x-small-height;
+}
+
+.x-small-bold {
+  font-weight: bold;
+  font-size: $x-small-size;
+  line-height: $x-small-height;
+}
+
+.small-regular {
+  font-weight: normal;
+  font-size: $small-size;
+  line-height: $small-height;
+}
+
+.small-bold {
+  font-weight: bold;
+  font-size: $small-size;
+  line-height: $small-height;
+}
+
+.medium-regular {
+  font-weight: normal;
+  font-size: $medium-size;
+  line-height: $medium-height;
+}
+.medium-medium {
+  font-weight: 500;
+  font-size: $medium-size;
+  line-height: $medium-height;
+}
+
+.medium-bold {
+  font-weight: bold;
+  font-size: $medium-size;
+  line-height: $medium-height;
+}
+
+.medium-tittle-bold {
+  font-weight: bold;
+  font-size: $medium-tittle-size;
+  line-height: $medium-tittle-height;
+}
+
+.medium-large-bold {
+  font-weight: bold;
+  font-size: $medium-large-size;
+  line-height: $medium-large-height;
+}
+
+.large-bold {
+  font-weight: bold;
+  font-size: $large-size;
+  line-height: $large-height;
+}
+
+.x-large-bold {
+  font-weight: bold;
+  font-size: $large-size;
+  line-height: $x-large-height;
+}
+
+

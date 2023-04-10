@@ -1,0 +1,128 @@
+@import '../fonts/gilroy/stylesheet.css';
+@import '../fonts/lufga/stylesheet.css';
+body {
+  font-family: Gilroy;
+  background-color: #F4F4F4;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+body a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.content {
+  flex: 1;
+}
+
+.header {
+  min-height: 100%;
+}
+
+.footer {
+  min-height: 100%;
+}
+
+.container {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+a.router-link-exact-active {
+  font-weight: bold;
+}
+
+a.router-link-active {
+  font-weight: bold;
+}
+
+.active-box {
+  color: #ffffff;
+  background-color: #1949F3;
+}
+.active-box img {
+  filter: invert(1);
+}
+
+.default-input-color {
+  background-color: #F4F4F4;
+  color: #767070;
+}
+
+.bordered-button {
+  border-radius: 10px;
+  padding: 15px 30px;
+  border-style: none;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+}
+
+.x-small-regular {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.x-small-bold {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.small-regular {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.small-bold {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.medium-regular {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.medium-medium {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.medium-bold {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.medium-tittle-bold {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.medium-large-bold {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 37px;
+}
+
+.large-bold {
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 50px;
+}
+
+.x-large-bold {
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 47px;
+}
+
+/*# sourceMappingURL=global.css.map */

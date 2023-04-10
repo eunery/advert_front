@@ -1,0 +1,25 @@
+@import 'vars';
+@import 'colors';
+
+.history-list {
+  margin-top: 25px;
+  .history-list__item{
+    background-color: $light-white-color;
+    border-radius: 20px;
+    padding: 20px 40px;
+    .history-list__item_tittle{
+      display: flex;
+      justify-content: space-between;
+      h3{
+        color: $blue-color;
+      }
+    }
+    .history-list__item_size{
+      margin-top: 15px;
+    }
+    .history-list__item_place{}
+    .history-list__item_text{
+      margin-top: 15px;
+    }
+  }
+}

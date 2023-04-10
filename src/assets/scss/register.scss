@@ -1,0 +1,46 @@
+@import 'vars';
+@import 'colors';
+
+.register {
+  background-color: $white-color;
+  max-width: 540px;
+  border-radius: 20px;
+  padding: 40px;
+  margin: 50px auto;
+}
+
+.register__form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  &>:not(:last-child), &:not(div) {
+    margin-bottom: 25px;
+
+  }
+}
+
+
+.register__gender-container {
+  display: flex;
+  position: relative;
+  margin-bottom: 25px;
+  & > div{
+    display: flex;
+    background-color: $light-white-color;
+    padding: 20px 20px;
+    border-radius: 10px;
+    align-items: center;
+  }
+  &>:not(:first-child) {
+    margin-left: 20px;
+  }
+}
+
+.register__checkmark {
+  margin-left: 15px;
+}
+
+.register__submit {
+  background-color: $blue-color;
+  color: $white-color;
+}

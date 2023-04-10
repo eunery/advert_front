@@ -1,0 +1,105 @@
+@import 'vars';
+@import 'colors';
+
+// Banner
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.banner__tittle {
+  color: $black-text-default;
+  max-width: 600px;
+}
+
+.banner__text {
+  color: $gray-color;
+  margin-top: 15px;
+  max-width: 500px;
+}
+
+.banner__login {
+  margin-top: 15px;
+  background-color: $blue-color;
+  color: $white-color;
+}
+
+.car {
+  width: auto;
+  height: 380px;
+}
+
+// Benefit Cards
+
+.benefit-cards {
+  background-color: $white-color;
+  padding: 65px 0;
+  .benefit-cards__tittle {
+    text-align: center;
+  }
+
+  .benefit-cards__container {
+    padding-top: 120px;
+    display: flex;
+    justify-content: space-evenly;
+    .benefit-cards_card {
+      max-width: 270px;
+      .card__border{
+        background-color: $light-blue-color;
+        border-radius: 30px;
+        width: $card-border-width;
+        height: $card-border-height;
+        max-width: $card-border-width;
+        max-height: $card-border-height;
+        margin: 0 auto;
+        position: relative;
+        .card-img {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      .card__tittle{
+        margin-top: 40px;
+        text-align: center;
+
+      }
+      .card__text{
+        margin-top: 20px;
+        text-align: center;
+        color: $dark-gray-color;
+      }
+    }
+  }
+}
+
+// offer
+
+.offer {
+  padding: 50px 0;
+  .offer__button {
+    background-color: $blue-color;
+    color: $white-color;
+    margin-top: 25px;
+  }
+  .offer__container {
+    display: flex;
+    align-items: center;
+  }
+}
+.offer__right {
+  margin-left: 50px;
+  p {
+    margin-top: 10px;
+    color: $dark-gray-color;
+  }
+}
+
+.offer__left {
+  .offer__car {
+    border-radius: 50px;
+  }
+}

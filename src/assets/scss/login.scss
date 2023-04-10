@@ -1,0 +1,38 @@
+@import 'vars';
+@import 'colors';
+
+.login {
+  background-color: $white-color;
+  max-width: 540px;
+  border-radius: 20px;
+  padding: 40px;
+  margin: 50px auto;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  &>:not(:last-child){
+    margin-bottom: 25px;
+  }
+}
+
+.login__remember-me-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.login__remember-me {
+}
+
+.login__checkmark {
+  margin-left: 15px;
+}
+
+.login__submit {
+  background-color: $blue-color;
+  color: $white-color;
+}

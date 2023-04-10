@@ -1,0 +1,40 @@
+.settings_name {
+  border-radius: 1px solid #6F6D6D;
+  border-style: solid;
+}
+
+.settings_form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.settings_form > :not(:first-child) {
+  margin-top: 30px;
+}
+
+.settings__gender_container {
+  display: flex;
+  position: relative;
+}
+.settings__gender_container > div {
+  display: flex;
+  background-color: #F4F4F4;
+  padding: 20px 20px;
+  border-radius: 10px;
+  align-items: center;
+}
+.settings__gender_container > :not(:first-child) {
+  margin-left: 20px;
+}
+
+.settings__checkmark {
+  margin-left: 15px;
+}
+
+.settings__submit {
+  background-color: #1949F3;
+  color: #ffffff;
+}
+
+/*# sourceMappingURL=settings.css.map */

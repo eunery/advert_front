@@ -1,0 +1,46 @@
+.account .container {
+  display: flex;
+}
+.account .container > div {
+  border-radius: 20px;
+}
+.account .container .account_left {
+  background-color: #ffffff;
+  padding: 40px;
+  min-width: 200px;
+  height: fit-content;
+}
+.account .container .account_left a.router-link-exact-active > div {
+  color: #ffffff;
+  background-color: #1949F3;
+}
+.account .container .account_left a.router-link-exact-active > div img {
+  filter: invert(1);
+}
+.account .container .account_left a.router-link-active > div {
+  color: #ffffff;
+  background-color: #1949F3;
+}
+.account .container .account_left a.router-link-active > div img {
+  filter: invert(1);
+}
+.account .container .account_left a > div {
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+.account .container .account_left a > div p {
+  margin-left: 15px;
+}
+.account .container .account_left a > :not(:last-child) {
+  margin-bottom: 15px;
+}
+.account .container .account_right {
+  background-color: #ffffff;
+  margin-left: 30px;
+  width: 100%;
+  padding: 40px;
+}
+
+/*# sourceMappingURL=account.css.map */

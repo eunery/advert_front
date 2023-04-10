@@ -1,0 +1,43 @@
+.register {
+  background-color: #ffffff;
+  max-width: 540px;
+  border-radius: 20px;
+  padding: 40px;
+  margin: 50px auto;
+}
+
+.register__form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.register__form > :not(:last-child), .register__form:not(div) {
+  margin-bottom: 25px;
+}
+
+.register__gender-container {
+  display: flex;
+  position: relative;
+  margin-bottom: 25px;
+}
+.register__gender-container > div {
+  display: flex;
+  background-color: #F4F4F4;
+  padding: 20px 20px;
+  border-radius: 10px;
+  align-items: center;
+}
+.register__gender-container > :not(:first-child) {
+  margin-left: 20px;
+}
+
+.register__checkmark {
+  margin-left: 15px;
+}
+
+.register__submit {
+  background-color: #1949F3;
+  color: #ffffff;
+}
+
+/*# sourceMappingURL=register.css.map */

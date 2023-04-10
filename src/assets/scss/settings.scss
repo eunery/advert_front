@@ -1,0 +1,41 @@
+@import 'vars';
+@import 'colors';
+
+.settings_name {
+  border-radius: 1px solid $dark-gray-color;
+  border-style: solid;
+}
+.settings_form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 0 auto;
+  &>:not(:first-child) {
+    margin-top: 30px;
+  }
+}
+
+.settings__gender_container {
+  display: flex;
+  position: relative;
+  & > div{
+    display: flex;
+    background-color: $light-white-color;
+    padding: 20px 20px;
+    border-radius: 10px;
+    align-items: center;
+  }
+  &>:not(:first-child) {
+    margin-left: 20px;
+  }
+}
+
+.settings__checkmark {
+  margin-left: 15px;
+}
+
+.settings__submit {
+  background-color: $blue-color;
+  color: $white-color;
+}
+

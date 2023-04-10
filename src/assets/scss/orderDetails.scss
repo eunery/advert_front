@@ -1,0 +1,39 @@
+@import 'vars';
+@import 'colors';
+
+.details_wrapper {
+  background: $white-color;
+  border-radius: 20px;
+  margin: 0 auto;
+  padding: 50px;
+  h2 {
+    color: $blue-color;
+  }
+  h3 {
+    margin-top: 40px;
+  }
+  p {
+    margin-top: 40px;
+  }
+  .details__image-container {
+    margin: 0 auto 50px;
+    max-width: 600px;
+    img {
+      border-radius: 20px;
+    }
+    .details__main_image {
+      display: block;
+      margin: 0 auto;
+
+    }
+    .details_images {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+}

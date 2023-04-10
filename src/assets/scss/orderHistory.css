@@ -1,0 +1,23 @@
+.history-list {
+  margin-top: 25px;
+}
+.history-list .history-list__item {
+  background-color: #F4F4F4;
+  border-radius: 20px;
+  padding: 20px 40px;
+}
+.history-list .history-list__item .history-list__item_tittle {
+  display: flex;
+  justify-content: space-between;
+}
+.history-list .history-list__item .history-list__item_tittle h3 {
+  color: #1949F3;
+}
+.history-list .history-list__item .history-list__item_size {
+  margin-top: 15px;
+}
+.history-list .history-list__item .history-list__item_text {
+  margin-top: 15px;
+}
+
+/*# sourceMappingURL=orderHistory.css.map */

@@ -1,0 +1,55 @@
+@import 'vars';
+@import 'colors';
+
+.account {
+  .container {
+    display: flex;
+    & > div{
+      border-radius: 20px;
+    }
+    .account_left {
+      background-color: $white-color;
+      padding: 40px;
+      min-width: 200px;
+      height: fit-content;
+      a.router-link-exact-active {
+        & > div {
+          color: $white-color;
+          background-color: $blue-color;
+          img {
+            filter: invert(1);
+          }
+        }
+      }
+      a.router-link-active {
+        & > div {
+          color: $white-color;
+          background-color: $blue-color;
+          img {
+            filter: invert(1);
+          }
+        }
+      }
+      a{
+        & > div {
+          padding: 15px;
+          border-radius: 10px;
+          display: flex;
+          align-items: center;
+          p {
+            margin-left: 15px;
+          }
+        }
+        &>:not(:last-child) {
+          margin-bottom: 15px;
+        }
+      }
+    }
+    .account_right{
+      background-color: $white-color;
+      margin-left: 30px;
+      width: 100%;
+      padding: 40px;
+    }
+  }
+}

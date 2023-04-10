@@ -1,0 +1,28 @@
+@import 'vars';
+@import 'colors';
+
+.info-table {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+
+.info-table_links {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  a {
+    text-decoration: none;
+  }
+  &>:not(:last-child) {
+    padding-bottom: 5px;
+  }
+}
+
+.info-table_tittle {
+  color: $black-text-default;
+}
+
+.info-table_text{
+  color: $dark-gray-color;
+}

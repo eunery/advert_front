@@ -1,0 +1,95 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.banner__tittle {
+  color: #000000;
+  max-width: 600px;
+}
+
+.banner__text {
+  color: #767070;
+  margin-top: 15px;
+  max-width: 500px;
+}
+
+.banner__login {
+  margin-top: 15px;
+  background-color: #1949F3;
+  color: #ffffff;
+}
+
+.car {
+  width: auto;
+  height: 380px;
+}
+
+.benefit-cards {
+  background-color: #ffffff;
+  padding: 65px 0;
+}
+.benefit-cards .benefit-cards__tittle {
+  text-align: center;
+}
+.benefit-cards .benefit-cards__container {
+  padding-top: 120px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.benefit-cards .benefit-cards__container .benefit-cards_card {
+  max-width: 270px;
+}
+.benefit-cards .benefit-cards__container .benefit-cards_card .card__border {
+  background-color: #F0F3FF;
+  border-radius: 30px;
+  width: 140px;
+  height: 140px;
+  max-width: 140px;
+  max-height: 140px;
+  margin: 0 auto;
+  position: relative;
+}
+.benefit-cards .benefit-cards__container .benefit-cards_card .card__border .card-img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.benefit-cards .benefit-cards__container .benefit-cards_card .card__tittle {
+  margin-top: 40px;
+  text-align: center;
+}
+.benefit-cards .benefit-cards__container .benefit-cards_card .card__text {
+  margin-top: 20px;
+  text-align: center;
+  color: #6F6D6D;
+}
+
+.offer {
+  padding: 50px 0;
+}
+.offer .offer__button {
+  background-color: #1949F3;
+  color: #ffffff;
+  margin-top: 25px;
+}
+.offer .offer__container {
+  display: flex;
+  align-items: center;
+}
+
+.offer__right {
+  margin-left: 50px;
+}
+.offer__right p {
+  margin-top: 10px;
+  color: #6F6D6D;
+}
+
+.offer__left .offer__car {
+  border-radius: 50px;
+}
+
+/*# sourceMappingURL=home.css.map */
