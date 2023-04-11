@@ -1,0 +1,24 @@
+.vehicles-list__item {
+  background-color: #F4F4F4;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+}
+
+.vehicles-list {
+  margin-top: 25px;
+}
+
+.vehicles__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vehicles-list__item_image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/*# sourceMappingURL=vehicles.css.map */

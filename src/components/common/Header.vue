@@ -1,7 +1,15 @@
 <script setup>
 import {useAuthStore} from "@/stores/authStore.js";
-
 const useStore = useAuthStore();
+
+function logout() {
+  useStore.logout().then(() => {
+    router.replace({ name: 'home'})
+  }).catch(() => {
+    console.log('123')
+  })
+}
+
 </script>
 
 <template>
@@ -17,15 +25,15 @@ const useStore = useAuthStore();
         <li class="nav-bar__item x-small-regular" ><router-link :to="{name: 'orders'}">Заказы</router-link></li>
         <li class="nav-bar__item x-small-regular"><router-link :to="{name: 'about'}">О нас</router-link></li>
         <li class="nav-bar__item x-small-regular"><router-link :to="{name: 'contacts'}">Контакты</router-link></li>
-        <li class="nav-bar__item x-small-regular"><router-link :to="{name: 'help'}">Помощь</router-link></li>
-        <li v-if="false" class="nav-bar__item"><button class="nav-bar_login bordered-button x-small-bold">
+        <li class="nav-bar__item x-small-regular"><router-link :to="{name: 'login'}">∫Помощь∫</router-link></li>
+        <li v-if="!useStore.is_auth" class="nav-bar__item"><button class="nav-bar_login bordered-button x-small-bold">
           <router-link :to="{name: 'login'}">Вход</router-link></button>
         </li>
-        <li v-if="useStore.user!=null" class="nav-bar__item x-small-bold">
-          <router-link :to="{name: 'account'}">{{useStore.user.name}} {{useStore.user.surname}}</router-link>
-          <router-link :to="{name: 'account'}">
+        <li v-if="useStore.is_auth" class="nav-bar__item x-small-bold">
+          <router-link :to="{name: 'accountInfo'}">{{useStore.user.name}} {{useStore.user.surname}}</router-link>
+          <router-link :to="{name: 'accountInfo'}">
             <img class="nav-bar__item_avatar" src="@/assets/images/test.png"></router-link>
-          <router-link to="/logout">Выход</router-link>
+          <button type="submit" @click="logout">Выход</button>
         </li>
       </ul>
     </div>
@@ -34,10 +42,11 @@ const useStore = useAuthStore();
 
 <script>
 import '../../assets/scss/header.css'
-import {useAuthStore} from "@/stores/authStore.js";
+import router from "@/router/router.js";
+
 export default {
   name: "Header",
-  data() {
+  methods: {
 
   }
 }

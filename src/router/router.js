@@ -1,4 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import {useAuthStore} from "@/stores/authStore.js";
+import api from "../api/api.js";
 
 const routes = [
     {
@@ -9,12 +11,18 @@ const routes = [
     {
         path: '/login',
         name: 'login',
-        component: () => import('/src/views/Login.vue')
+        component: () => import('/src/views/Login.vue'),
+        meta: {
+            hideForAuth: true
+        }
     },
     {
         path: '/reg',
         name: 'registration',
-        component: () => import('/src/views/Register.vue')
+        component: () => import('/src/views/Register.vue'),
+        meta: {
+            hideForAuth: true
+        }
     },
 
     {
@@ -22,6 +30,11 @@ const routes = [
         name: 'account',
         component: () => import('/src/views/Account.vue'),
         children: [
+            {
+                path: '/account/info',
+                name: 'accountInfo',
+                component: () => import('/src/components/pages/AccountInfo.vue')
+            },
             {
                 path: '/account/settings',
                 name: 'accountSettings',
@@ -80,5 +93,19 @@ const router = createRouter({
     history: createWebHistory(),
     routes,
 })
+// router.beforeEach((from, to ,next) => {
+//     const store = useAuthStore()
+//     if (to.matched.some(record => record.meta.requiresAuth)) {
+//         if (store.is_auth){
+//             next()
+//         } else {
+//             router.replace({path: '/login'})
+//         }
+//     } else if (to.meta.hideForAuth) {
+//         router.replace({path: '/home'})
+//     } else {
+//         next()
+//     }
+// })
 
 export default router

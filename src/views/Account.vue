@@ -1,7 +1,24 @@
+<script setup>
+import {useAuthStore} from "@/stores/authStore.js";
+import {onBeforeMount} from "vue";
+
+const useStore = useAuthStore()
+
+onBeforeMount(() => {
+  useStore.checkingAuth()
+})
+</script>
+
 <template>
   <div class="account">
     <div class="container">
       <div class="account_left">
+        <router-link :to="{name: 'accountInfo'}">
+          <div class="account__info medium-bold">
+            <img src="../assets/images/info.svg" alt="">
+            <p>Аккаунт</p>
+          </div>
+        </router-link>
         <router-link :to="{name: 'accountSettings'}">
           <div class="account__settings medium-bold">
             <img src="../assets/images/settingsBlack.svg" alt="">
@@ -23,9 +40,6 @@
       </div>
       <div class="account_right">
         <router-view/>
-<!--        <Settings/>-->
-        <!--  <OrderHistory/>-->
-        <!--  <Vehicles/>-->
       </div>
     </div>
   </div>

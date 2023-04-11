@@ -1,14 +1,13 @@
 import {defineStore} from "pinia";
 import api from "../api/api.js";
 import _ from 'lodash';
-import orderList from "../components/pages/OrderList.vue";
-import order from "../views/Order.vue";
 
 export const useOrderStore = defineStore('orderStore',{
     state: () => ({
         data: [],
         error: null,
         ordersList: [],
+        ordersHistory: [],
         order: null
     }),
     actions: {
@@ -28,6 +27,15 @@ export const useOrderStore = defineStore('orderStore',{
             }
             catch (e) {
                 this.error = e;
+            }
+        },
+        async getOrdersHistory() {
+            try{
+                const response = await api.accountOrderHistory()
+                this.ordersHistory = response.data
+            } catch (e) {
+                this.error = e
+                console.log(e)
             }
         }
     },
