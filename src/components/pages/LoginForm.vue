@@ -6,14 +6,14 @@ const useStore = useAuthStore();
     <div class="login">
       <h1 class="login__tittle x-large-bold">Вход</h1>
       <form class="login__form" @submit.prevent="submit">
-        <input class="login__email bordered-button small-regular default-input-color" v-model="form.email" type="email" placeholder="Электронная почта">
-        <input class="login__password bordered-button small-regular default-input-color" v-model="form.password" type="password" placeholder="Пароль">
-        <div class="login__remember-me-container">
+        <input class="login__email default-input-size bordered-button small-regular default-input-color" v-model="form.email" type="email" placeholder="Электронная почта">
+        <input class="login__password default-input-size bordered-button small-regular default-input-color" v-model="form.password" type="password" placeholder="Пароль">
+        <div v-if="false" class="login__remember-me-container">
           <input class="login__remember-me" type="checkbox">
           <p class="login__checkmark small-bold">Запомнить меня</p>
         </div>
-        <span v-if="useStore.error != null">{{useStore.error.response.data.message}}</span>
-        <input class="login__submit bordered-button x-small-bold" type="submit">
+        <span v-if="useStore.error != null">{{useStore.error.response.message}}</span>
+        <input class="login__submit default-input-size bordered-button x-small-bold" type="submit">
       </form>
     </div>
   </div>
@@ -41,9 +41,9 @@ export default {
   methods: {
     submit() {
       useStore.login(this.form).then(() => {
-        if (useStore.is_auth){
+        if (useStore.is_authed){
           router.push({path: '/'}).then(() => {
-            // window.location.reload()
+            window.location.reload()
           })
         }
       }).catch(() => {

@@ -1,3 +1,9 @@
+<script setup>
+import {useAuthStore} from "../../stores/authStore.js";
+
+const useStore = useAuthStore()
+</script>
+
 <template>
   <section class="offer">
     <div class="container">
@@ -10,7 +16,7 @@
           <p class="medium-medium">
             Зарегистрируйтесь в личном кабинете, чтобы начать. Заполните нужную информацию. Выбирайте подходящие для себя условия
           </p>
-          <button class="offer__button bordered-button x-small-bold">
+          <button v-if="!useStore.is_auth" class="offer__button bordered-button x-small-bold">
             <router-link :to="{name: 'login'}">Вход</router-link></button>
         </div>
       </div>

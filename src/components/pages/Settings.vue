@@ -4,8 +4,8 @@
 <template>
   <section class="settings">
     <form class="settings_form" @submit.prevent="submit">
-      <input class="settings_name bordered-button small-regular" v-model="form.name" type="text" placeholder="Имя">
-      <input class="settings_name bordered-button small-regular" v-model="form.surname" type="text" placeholder="Фамилия" >
+      <input class="settings_name default-input-size bordered-button small-regular" v-model="form.name" type="text" placeholder="Имя">
+      <input class="settings_name default-input-size bordered-button small-regular" v-model="form.surname" type="text" placeholder="Фамилия" >
       <div v-if="false" class="settings__gender_container">
         <div>
           <input class="settings__gender-male" type="checkbox">
@@ -16,9 +16,9 @@
           <p class="settings__checkmark small-bold">Женщина</p>
         </div>
       </div>
-      <input class="settings_name bordered-button small-regular" v-model="form.email" type="email" placeholder="Электронная почта">
+      <input class="settings_name default-input-size bordered-button small-regular" v-model="form.email" type="email" placeholder="Электронная почта">
       <input v-if="false" class="settings_name bordered-button small-regular" type="text" placeholder="Возраст">
-      <input class="settings__submit bordered-button x-small-bold" type="submit">
+      <input class="settings__submit default-input-size bordered-button x-small-bold" type="submit">
     </form>
   </section>
 </template>
@@ -46,7 +46,7 @@ export default {
   methods: {
     submit() {
       useStore.accountChangeSettings(this.form).then(() => {
-        if (useStore.is_auth){
+        if (useStore.is_authed){
           router.push({path: '/'}).then(() => {
             // window.location.reload()
           })

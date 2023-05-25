@@ -46,6 +46,10 @@ a.router-link-active {
   }
 }
 
+.default-input-size {
+  padding: 15px 30px;
+}
+
 .default-input-color {
   background-color: $light-white-color;
   color: $gray-color;
@@ -53,11 +57,13 @@ a.router-link-active {
 
 .bordered-button {
   border-radius: 10px;
-  padding: 15px 30px;
   border-style: none;
   box-sizing: border-box;
   outline: none;
   text-decoration: none;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .x-small-regular {

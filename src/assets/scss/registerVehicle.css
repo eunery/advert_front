@@ -1,0 +1,23 @@
+.register-vehicle_tittle {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.register-vehicle_button {
+  background-color: #1949F3;
+  color: #ffffff;
+  padding: 10px 20px;
+}
+
+.register-vehicle_form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.register-vehicle_form > :not(:last-child) {
+  margin-bottom: 20px;
+  background-color: #F4F4F4;
+  padding: 10px 20px;
+}
+
+/*# sourceMappingURL=registerVehicle.css.map */

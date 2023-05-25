@@ -7,7 +7,7 @@ const useStore = useAuthStore()
   <div>
     <p>Имя: {{useStore.user.name}}</p>
     <p>Фамилия: {{useStore.user.surname}}</p>
-    <p>Баланс: {{useStore.user.balance}}</p>
+    <p>Баланс: {{useStore.user.balance}}₽</p>
     <p>Почта: {{useStore.user.email}}</p>
   </div>
 </template>

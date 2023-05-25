@@ -1,6 +1,17 @@
 @import 'vars';
 @import 'colors';
 
+.accept-order {
+  background-color: $blue-color;
+  color: $white-color;
+  padding: 10px 20px;
+}
+
+.choose_vehicle{
+  background-color: $light-white-color;
+  padding: 10px 20px;
+}
+
 .details_wrapper {
   background: $white-color;
   border-radius: 20px;

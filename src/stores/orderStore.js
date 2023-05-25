@@ -37,6 +37,14 @@ export const useOrderStore = defineStore('orderStore',{
                 this.error = e
                 console.log(e)
             }
+        },
+        async notConfirmedOrders() {
+            try {
+                const response = await api.notConfirmedOrders()
+                this.ordersList = response.data
+            } catch (e) {
+                this.error = e
+            }
         }
     },
 })

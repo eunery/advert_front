@@ -21,4 +21,18 @@
   border-radius: 10px;
 }
 
+.delete-vehicle {
+  margin-top: 5px;
+}
+
+.delete-vehicle_button {
+  background-color: #1949F3;
+  color: #ffffff;
+  padding: 10px 20px;
+}
+
+.add-vehicle_button {
+  padding: 10px 20px;
+}
+
 /*# sourceMappingURL=vehicles.css.map */

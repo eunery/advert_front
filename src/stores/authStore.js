@@ -13,14 +13,26 @@ export const useAuthStore = defineStore('authStore',{
     actions: {
         async login(form) {
             try {
+                localStorage.clear()
                 let response = await api.auth(form)
                 localStorage.setItem('Authorization', response.data.token)
                 this.token = response.data.token
                 this.user = response.data.user
                 this.is_auth = true
-                // console.log(response.data)
             }
             catch (e) {
+                this.error = e
+            }
+        },
+        async reg(form) {
+            try {
+                localStorage.clear()
+                let response = await api.register(form)
+                localStorage.setItem('Authorization', response.data.token)
+                this.user = response.data.user
+                this.token = response.data.token
+                this.is_auth = true
+            } catch (e) {
                 this.error = e
             }
         },
@@ -29,15 +41,17 @@ export const useAuthStore = defineStore('authStore',{
                 let response = await api.checkAuth()
                 this.token = response.data.token
                 this.user = response.data.user
+                this.is_auth = true
             }
             catch (e) {
+                this.is_auth = false
                 this.error = e
             }
         },
         async logout() {
             try {
                 let response = await api.logout()
-                localStorage.clear()
+                window.localStorage.clear()
                 this.token = null
                 this.user = null
                 this.error = null
@@ -50,6 +64,27 @@ export const useAuthStore = defineStore('authStore',{
         async accountChangeSettings(form) {
             try {
                 let response = await api.accountInfo(form)
+            } catch (e) {
+                this.error = e
+            }
+        },
+        async acceptOrder(id) {
+            try {
+                let response = await api.takeOrder(id)
+            } catch (e) {
+                this.error = e
+            }
+        },
+        async confirmOrderCompletion(id) {
+            try {
+                let response = await api.confirmOrderCompletion(id)
+            } catch (e) {
+                this.error = e
+            }
+        },
+        async confirmVehicleRegistration(id) {
+            try {
+                let response = await api.confirmVehicleRegistration(id)
             } catch (e) {
                 this.error = e
             }

@@ -1,0 +1,38 @@
+@import 'vars';
+@import 'colors';
+
+.admin-panel_tittle {
+  text-align: center;
+}
+
+.admin-panel__confirm-container{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  &>:not(:last-child) {
+    margin-right: 20px;
+  }
+  &>:last-child {
+    margin-left: 15px;
+  }
+}
+
+.admin-panel__confirm-button{
+  background-color: $blue-color;
+  color: $white-color;
+  padding: 10px;
+}
+
+.admin-panel__item-list {
+  color: #1949F3;
+  display: flex;
+  align-items: center;
+
+}
+
+.admin-panel__item-list_img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px ;
+}

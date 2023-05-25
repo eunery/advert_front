@@ -1,0 +1,36 @@
+.admin-panel_tittle {
+  text-align: center;
+}
+
+.admin-panel__confirm-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+.admin-panel__confirm-container > :not(:last-child) {
+  margin-right: 20px;
+}
+.admin-panel__confirm-container > :last-child {
+  margin-left: 15px;
+}
+
+.admin-panel__confirm-button {
+  background-color: #1949F3;
+  color: #ffffff;
+  padding: 10px;
+}
+
+.admin-panel__item-list {
+  color: #1949F3;
+  display: flex;
+  align-items: center;
+}
+
+.admin-panel__item-list_img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/*# sourceMappingURL=adminPanel.css.map */

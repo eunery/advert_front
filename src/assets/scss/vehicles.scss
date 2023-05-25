@@ -24,3 +24,18 @@
   height: auto;
   border-radius: 10px;
 }
+
+.delete-vehicle {
+  width: 20px;
+  height: 10px;
+}
+
+.delete-vehicle_button{
+  background-color: $blue-color;
+  color: $white-color;
+  padding: 10px 20px;
+}
+
+.add-vehicle_button{
+  padding: 10px 20px;
+}

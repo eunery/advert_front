@@ -50,6 +50,11 @@ const routes = [
                 name: 'accountVehicles',
                 component: () => import('/src/components/pages/Vehicles.vue')
             },
+            {
+                path: '/account/newVehicle',
+                name: 'registerVehicle',
+                component: () => import('/src/components/pages/RegisterVehicle.vue')
+            },
         ]
     },
     {
@@ -87,11 +92,25 @@ const routes = [
         name: 'notFound',
         component: () => import('/src/components/common/NotFound.vue')
     },
+    {
+        path: '/admin',
+        name: 'adminPanel',
+        component: () => import('/src/views/Admin.vue')
+    }
 ]
 
 const router = createRouter({
     history: createWebHistory(),
     routes,
+})
+router.beforeEach(() => {
+    // var auth = localStorage.getItem('Authorization');
+    // localStorage.clear();
+    // localStorage.setItem('Authorization', auth);
+    if (localStorage.getItem('Authorization')){
+        const storeAuth = useAuthStore()
+        storeAuth.checkingAuth()
+    }
 })
 // router.beforeEach((from, to ,next) => {
 //     const store = useAuthStore()

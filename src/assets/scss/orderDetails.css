@@ -1,3 +1,14 @@
+.accept-order {
+  background-color: #1949F3;
+  color: #ffffff;
+  padding: 10px 20px;
+}
+
+.choose_vehicle {
+  background-color: #F4F4F4;
+  padding: 10px 20px;
+}
+
 .details_wrapper {
   background: #ffffff;
   border-radius: 20px;

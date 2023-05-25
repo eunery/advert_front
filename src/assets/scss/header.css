@@ -27,6 +27,12 @@
 .nav-bar_login {
   background-color: #ffffff;
   color: #1949F3;
+  padding: 10px 20px;
+}
+
+.exit_button {
+  background-color: #ffffff;
+  padding: 10px 20px;
 }
 
 /*# sourceMappingURL=header.css.map */

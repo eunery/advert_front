@@ -17,6 +17,29 @@ export const useVehicleStore = defineStore('vehicleStore', {
             } catch (e) {
                 this.error = e
             }
+        },
+        async newVehicle(form) {
+            try {
+                const response = await api.createVehicle(form)
+            } catch (e) {
+                this.error = e
+            }
+        },
+        async deleteVehicle(id){
+            try {
+                const response = await api.delVehicle(id)
+                this.vehiclesList = this.vehiclesList.filter(vehicle => vehicle.id !== id);
+            } catch (e){
+                this.error = e
+            }
+        },
+        async notConfirmedVehicles() {
+          try {
+              const response = await api.notConfirmedVehicles()
+              this.vehiclesList = response.data
+          } catch (e) {
+              this.error = e
+          }
         }
     }
 })

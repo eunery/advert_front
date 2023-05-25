@@ -24,16 +24,16 @@ function logout() {
         <li class="nav-bar__item x-small-regular" ><router-link :to="{name: 'home'}" >Главная</router-link></li>
         <li class="nav-bar__item x-small-regular" ><router-link :to="{name: 'orders'}">Заказы</router-link></li>
         <li class="nav-bar__item x-small-regular"><router-link :to="{name: 'about'}">О нас</router-link></li>
-        <li class="nav-bar__item x-small-regular"><router-link :to="{name: 'contacts'}">Контакты</router-link></li>
-        <li class="nav-bar__item x-small-regular"><router-link :to="{name: 'login'}">∫Помощь∫</router-link></li>
+        <li class="nav-bar__item x-small-regular"><router-link :to="{name: 'registration'}">≈Контакты≈</router-link></li>
+        <li class="nav-bar__item x-small-regular"><router-link :to="{name: 'login'}">∑Помощь∑</router-link></li>
         <li v-if="!useStore.is_auth" class="nav-bar__item"><button class="nav-bar_login bordered-button x-small-bold">
           <router-link :to="{name: 'login'}">Вход</router-link></button>
         </li>
         <li v-if="useStore.is_auth" class="nav-bar__item x-small-bold">
-          <router-link :to="{name: 'accountInfo'}">{{useStore.user.name}} {{useStore.user.surname}}</router-link>
+          <router-link :to="{name: 'accountInfo'}"> {{useStore.user.balance}}₽ {{useStore.user.name}} {{useStore.user.surname}}</router-link>
           <router-link :to="{name: 'accountInfo'}">
             <img class="nav-bar__item_avatar" src="@/assets/images/test.png"></router-link>
-          <button type="submit" @click="logout">Выход</button>
+          <button class="exit_button bordered-button x-small-bold" type="submit" @click="logout">Выход</button>
         </li>
       </ul>
     </div>

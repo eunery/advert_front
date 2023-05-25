@@ -15,7 +15,7 @@ onBeforeMount(() => {
 <template xmlns="http://www.w3.org/1999/html">
   <div class="orders">
     <div class="container">
-      <input class="orders_search bordered-button small-regular" type="search" placeholder="Поиск">
+      <input class="orders_search default-input-size bordered-button small-regular" type="search" placeholder="Поиск">
       <h1 class="orders__tittle large-bold">Всего найдено: {{useStore.ordersList.length}} заказов</h1>
       <div v-for="(item, index) in useStore.ordersList" :key="index" class="orders__list">
         <div class="orders__item">
